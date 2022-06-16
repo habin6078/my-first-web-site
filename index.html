@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World!</title>
+        <style>
+            div {
+                background-color: red;
+                margin-top: 10px;
+            }
+
+        </style>
+        <script>
+            // var i = 1;
+            // alert(i);
+            function clickBtn1(){
+                document.body.style.backgroundImage = "url('image1.png')";
+            }
+            function clickBtn2(){
+                document.body.style.backgroundImage = "url('image2.jpg')";
+            }
+
+            // (function(){
+            //     var showObj = document.getElementById("showIpt");
+            //     var count = 0;
+            //     showObj.value = count;
+            //     document.getElementById("incrementBtn").addEventListener("onclick", function(){
+            //         count = count + 1;
+            //         showObj.value = count;
+            //     });
+            //     document.getElementById("decrementBtn").addEventListener("onclick", function(){
+            //         count = count - 1;
+            //         showObj.value = count;
+            //     });
+            // })();
+
+            document.addEventListener("DOMContentLoaded", function(){
+                var showObj = document.getElementById("showIpt");
+                var count = 0;
+                showObj.value = count;
+                document.getElementById("incrementBtn").addEventListener("click", function(){
+                    count = count + 1;
+                    showObj.value = count;
+                });
+                document.getElementById("decrementBtn").addEventListener("click", function(){
+                    count = count - 1;
+                    showObj.value = count;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>하빈이의 일기장</h1>
+        <p>안녕하세요, 반갑습니다</p>
+        <div>1234</div>
+        <div>5678</div>
+        <div>
+            <button onclick="clickBtn1();">버튼1</button>
+            <button onclick="clickBtn2();">버튼2</button>
+        </div>
+        <div>
+            <input id="showIpt" type="text">
+            <button id="incrementBtn">+</button>
+            <button id="decrementBtn">-</button>
+        </div>
+    </body>
+</html>
